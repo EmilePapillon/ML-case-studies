@@ -4,6 +4,8 @@ import argparse
 import os
 import pandas as pd
 
+from sklearn import svm
+
 # sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. 
 # from sklearn.externals import joblib
 # Import joblib package directly
@@ -59,11 +61,11 @@ if __name__ == '__main__':
     
 
     ## TODO: Define a model 
-    model = None
+    model = svm.LinearSVC()
     
     
     ## TODO: Train the model
-    
+    model.fit(train_x, train_y)
     
     
     ## --- End of your code  --- ##
