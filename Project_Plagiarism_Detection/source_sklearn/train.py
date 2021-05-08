@@ -4,7 +4,7 @@ import argparse
 import os
 import pandas as pd
 
-from sklearn import svm
+from sklearn.linear_model import LogisticRegression
 
 # sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. 
 # from sklearn.externals import joblib
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     
 
     ## TODO: Define a model 
-    model = svm.LinearSVC()
+    model = LogisticRegression()
     
     
     ## TODO: Train the model
